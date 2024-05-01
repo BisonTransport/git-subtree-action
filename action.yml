@@ -1,4 +1,4 @@
-name: "karlludwigweise/git-subtree"
+name: "bisontransport/git-subtree-action"
 description: "Run git subtree commands in GitHub Actions"
 branding:
   icon: git-merge
