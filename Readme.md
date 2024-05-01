@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: karlludwigweise/git-subtree@v1
+      - uses: bisontransport/git-subtree-action@v1
         with:
           pat: ${{ secrets.PAT }}
           repo: https://github.com/{user}/{repo}.git
@@ -38,14 +38,15 @@ jobs:
 
 ## Parameters
 
-| Input     | Description                                        | Required | Default            |
-| --------- | -------------------------------------------------- | -------- | ------------------ |
-| pat       | GitHub Persoanl Access Token                       | true     |                    |
-| git_name  | Git User Name                                      |          | GitHub Actions     |
-| git_email | Git User Email                                     |          | actions@github.com |
-| repo      | Repository to add/pull (only https path supported) | true     |                    |
-| action    | Action (add/ pull)                                 | true     |                    |
-| position  | Branch Name or Commit Sha                          |          | main               |
-| prefix    | Path to put subtree in repo                        | true     |                    |
-| squash    | Should the subtree merge be sqashed                |          | true               |
-| message   | Message (depending on command)                     |          | Subtree Action     |
+| Input             | Description                                        | Required | Default            |
+| ----------------- | -------------------------------------------------- | -------- | ------------------ |
+| pat               | GitHub Persoanl Access Token                       | true     |                    |
+| git_name          | Git User Name                                      |          | GitHub Actions     |
+| git_email         | Git User Email                                     |          | actions@github.com |
+| repo              | Repository to add/pull (only https path supported) | true     |                    |
+| action            | Action (add/ pull)                                 | true     |                    |
+| position          | Branch Name or Commit Sha                          |          | main               |
+| position_fallback | Branch Name of Commit Sha                          |          | master             |
+| prefix            | Path to put subtree in repo                        | true     |                    |
+| squash            | Should the subtree merge be sqashed                |          | true               |
+| message           | Message (depending on command)                     |          | Subtree Action     |
